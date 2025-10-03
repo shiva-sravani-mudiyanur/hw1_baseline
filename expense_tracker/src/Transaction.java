@@ -4,6 +4,11 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
+/**
+ * The Transaction class represents a financial transaction with an amount, category, and timestamp. 
+ * It includes getter and setter methods to access and modify these details.
+ */
+
 public class Transaction {
 
   private double amount;

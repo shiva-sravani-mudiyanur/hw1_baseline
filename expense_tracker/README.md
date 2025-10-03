@@ -40,3 +40,15 @@ Here are some examples of violating ```non-functional``` requirements:
 
 ## Understandibility
 For the understandability section, we will be inspecting your git log. You should include either the .git folder or else a gitLog.(pdf | txt).
+
+## Program Features:
+-> Provides users two input fields "amount" and "category" to enter their expenses. 
+-> Validates amount field to fall in the range of 0 to 1000.
+-> Validates amount fields for valid input type (double).
+-> Validates category fields into predefined categories - {food, travels, bills, entertainment, other} 
+-> Records the expenses in a table format and displays the total amount. 
+
+## Future Improvements:
+-> Sorting transactions by amount/category/date.
+-> Designing a pie-chart to display the percentage of expenses spent on each category.
+
