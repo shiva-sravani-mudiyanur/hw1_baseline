@@ -7,6 +7,11 @@ import java.awt.*;
 import java.util.ArrayList;
 import java.util.List; 
 
+/**
+ * ExpenseTrackerView class represents the graphical user interface (GUI) for the Expense Tracker application.
+ * It extends JFrame and provides UI components for users to add and view their transactions and display error messages if any.
+ */
+
 public class ExpenseTrackerView extends JFrame {
 
   private JTable transactionsTable;
@@ -22,13 +27,16 @@ public class ExpenseTrackerView extends JFrame {
     return transactionsTable;
   }
 
-  public double getAmountField() {
-    if(amountField.getText().isEmpty()) {
-      return 0;
-    }else {
-    double amount = Double.parseDouble(amountField.getText());
-    return amount;
-    }
+  public double getAmountField()throws Exception {
+	  try {
+	        if (amountField.getText().isEmpty()) {
+	            return 0;
+	        } else {
+	            return Double.parseDouble(amountField.getText());
+	        }
+	    }  catch (Exception e) {
+            throw new Exception("Kindly enter the amount from 0 to 1000 range");
+        }
   }
 
   public void setAmountField(JTextField amountField) {
@@ -129,8 +137,6 @@ public class ExpenseTrackerView extends JFrame {
     getTableModel().addRow(new Object[]{t.getAmount(), t.getCategory(), t.getTimestamp()});
     refresh();
   }
-  
-
 
   // Other view methods
 }
