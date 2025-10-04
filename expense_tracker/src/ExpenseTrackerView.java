@@ -5,11 +5,14 @@ import javax.swing.table.DefaultTableModel;
 
 import java.awt.*;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List; 
 
 /**
  * ExpenseTrackerView class represents the graphical user interface (GUI) for the Expense Tracker application.
  * It extends JFrame and provides UI components for users to add and view their transactions and display error messages if any.
+ * 
+ * Encapsulated transactions list by making it private and final and the immutable getter returns an unmodifiable view of the list 
  */
 
 public class ExpenseTrackerView extends JFrame {
@@ -19,7 +22,8 @@ public class ExpenseTrackerView extends JFrame {
   private JTextField amountField;
   private JTextField categoryField;
   private DefaultTableModel model;
-  private List<Transaction> transactions = new ArrayList<>();
+  //Made transaction list final and private  
+  private final List<Transaction> transactions = new ArrayList<>();
 
   
 
@@ -128,8 +132,9 @@ public class ExpenseTrackerView extends JFrame {
   
   }
 
+  /** Return an immutable view of the transactions list. */
   public List<Transaction> getTransactions() {
-    return transactions;
+    return Collections.unmodifiableList(transactions);
   }
   
   public void addTransaction(Transaction t) {

@@ -2,18 +2,21 @@
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.List;
+//import java.util.List;
 
 /**
  * The Transaction class represents a financial transaction with an amount, category, and timestamp. 
  * It includes getter and setter methods to access and modify these details.
+ * 
+ * Made changes to transactions to make the class Immutable by making the fields private & final and removing setters.
+ * Values to the fields are assigned only when object created and can't be modified further.  
  */
 
-public class Transaction {
+public final class Transaction {
 
-  private double amount;
-  private String category;
-  private String timestamp;
+  private final double amount;
+  private final String category;
+  private final String timestamp;
 
   public Transaction(double amount, String category) {
     this.amount = amount;
@@ -25,16 +28,8 @@ public class Transaction {
     return amount;
   }
 
-  public void setAmount(double amount) {
-    this.amount = amount;
-  }
-
   public String getCategory() {
     return category;
-  }
-
-  public void setCategory(String category) {
-    this.category = category; 
   }
   
   public String getTimestamp() {
