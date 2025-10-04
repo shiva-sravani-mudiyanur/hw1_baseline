@@ -1,0 +1,12 @@
+cf9153f implemented encapsulation and immutability
+326f8fd ant documenting
+5650e11 Added comments to the files and modified README.md file content
+1198120 Added InputValidation.java file and added comments
+609238f Gitignore update
+4aba3f3 Readme Update
+e6b5eef Readme Update
+8c41e80 Merge branch 'main' of https://github.com/CS520-Fall2023/hw1_baseline
+d3a5c14 Readme Update
+34bd5aa Readme Update
+72141cc HW1 file updates
+ed592ee Initial commit
